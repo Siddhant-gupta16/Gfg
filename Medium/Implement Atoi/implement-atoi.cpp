@@ -10,29 +10,33 @@ using namespace std;
 class Solution{
   public:
     /*You are required to complete this method */
-    int atoi(string str) {
-   if(!((str[0]>='0'&&str[0]<='9')||str[0]=='-'))
-    {
-        return -1;
+    int atoi(string s) {
+        //Your code here
+        int num=0,i=0;
+        int sign=1;
         
-    }
-    for(int i=1;i<str.length();i++){
-        
-        
-        if((str[i]>='0'&&str[i]<='9')){
-            continue;
+        while(s[i]==' '){
+            i++;
         }
-        else{
-            return -1;
+        if(i<s.size() && (s[i]=='-' || s[i]=='+')){
+            sign=s[i]=='+'?1:-1;
+            i++;
+        }
+        while(i<s.size()){
+          if(isdigit(s[i])){
+              num=num*10+(s[i]-'0');
+              i++;
+          } 
+          else{
+            
+          return -1;
+        }
         }
         
-    }
-    
-  
-        int ans = stoi(str);
-        return ans;
+        return num*sign;
     }
 };
+
 
 //{ Driver Code Starts.
 int main()
