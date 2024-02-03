@@ -6,21 +6,10 @@ using namespace std;
 class Solution {
   public:
     int setBits(int N) {
-           
-         int count = 0;
-    
-    while (N > 0) {
+        bitset<32> binary(N);
         
-         count += N & 1;
-
-      
-          N >>= 1;
-    }
-
-         return count; 
-           
-           
-           
+        int result = binary.count();
+        return result;
     }
 };
 
