@@ -22,11 +22,11 @@ class Solution{
             j = n - 1;
         }
         
-        else if(j==i){
-            i++;
-            j=n-1;
+        // else if(j==i){
+        //     i++;
+        //     j=n-1;
             
-        }
+        // }
         
         
         else{
