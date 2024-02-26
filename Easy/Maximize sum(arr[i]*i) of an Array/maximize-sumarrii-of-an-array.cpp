@@ -14,7 +14,7 @@ class Solution{
        for(int i=0;i<n;i++){
            ans = (ans + (static_cast<long long int>(a[i]) * i)) % MOD;
        }
-    //   ans = ans % (long long int )(pow(10,9) + 7);
+    
        return ans;
     }
 };
